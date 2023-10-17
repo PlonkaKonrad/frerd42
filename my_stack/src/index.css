@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes check {
+    0% {
+      height: 0;
+      width: 0;
+    }
+    25% {
+      height: 0;
+      width: 10px;
+    }
+    50% {
+      height: 20px;
+      width: 10px;
+    }
+  }
+  
+  
+  .wrapper {
+    color: #fff;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  .mark-done-checkbox {
+    background-color: transparent;
+    display: inline-block;
+    height: 50px;
+    margin: 0 0.25em;
+    width: 50px;
+  }
+  
+  .mark-done-checkbox label {
+    display: block;
+    height: 50px;
+    position: relative;
+    width: 50px;
+    cursor: pointer;
+  
+  }
+  
+  .mark-done-checkbox label:after {
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin: left top;
+    border-right: 4px solid #cee;
+    border-top: 4px solid #cee;
+    content: '';
+    display: block;
+    height: 20px;
+    left: 14px;
+    position: absolute;
+    top: 26px;
+    width: 10px;
+  }
+  
+  .mark-done-checkbox label:hover:after {
+    border-color: #bdd;
+  }
+  
+  .mark-done-checkbox > input {
+    display: none;
+  }
+  
+  input:checked + label:after {
+    animation: check 0.8s;
+    border-color: green;
+  }
+  
+  ::-webkit-scrollbar-track
+  {
+      border-radius: 10px;
+      background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar
+  {
+      width: 6px;
+      background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb
+  {
+      border-radius: 10px;
+      background-color: lightgrey;
+  }
+  
+  
